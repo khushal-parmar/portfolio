@@ -1,0 +1,98 @@
+/* assets/css/style.css  (src/index.css + framer-motion animations ના CSS replacements) */
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  background-color: #030712;
+  color: #f8fafc;
+  cursor: none;
+}
+
+/* ---------- Scroll reveal (framer-motion whileInView replacement) ---------- */
+.js .reveal {
+  opacity: 0;
+  transform: translate3d(var(--rx, 0), var(--ry, 20px), 0);
+  transition: opacity var(--rd, .5s) ease-out, transform var(--rd, .5s) ease-out;
+  transition-delay: var(--delay, 0s);
+}
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Hero entrance animations ---------- */
+@keyframes heroPop {
+  from { opacity: 0; transform: scale(.9); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes heroUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes heroFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.hero-pop  { animation: heroPop  .5s ease-out both; }
+.hero-up   { animation: heroUp   .6s ease-out both; }
+.hero-fade { animation: heroFade .8s ease-out both; }
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+.marquee-track { animation: marquee 18s linear infinite; }
+
+/* ---------- Navbar sliding pill ---------- */
+#nav-pill {
+  transition: left .35s cubic-bezier(.34, 1.2, .64, 1), width .35s cubic-bezier(.34, 1.2, .64, 1), opacity .2s;
+}
+
+/* ---------- Scroll to top ---------- */
+#scroll-top {
+  opacity: 0;
+  transform: translateY(20px) scale(.5);
+  pointer-events: none;
+  transition: opacity .25s ease-out, transform .25s ease-out, background-color .15s;
+}
+#scroll-top.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+#scroll-top.show:hover { transform: translateY(-2px) scale(1.1); }
+#scroll-top.show:active { transform: scale(.95); }
+
+/* ---------- Project modal ---------- */
+#demo-modal { display: none; }
+#demo-modal.open { display: flex; }
+#demo-modal .modal-backdrop { animation: heroFade .2s ease-out both; }
+#demo-modal .modal-card { animation: modalIn .2s ease-out both; }
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(15px) scale(.94); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Custom cursor ---------- */
+#cursor-dot, #cursor-ring {
+  transition: width .15s, height .15s, background-color .15s, border-color .2s, opacity .2s;
+  opacity: 0;
+}
+#cursor-dot.visible, #cursor-ring.visible { opacity: 1; }
+#cursor-dot  { width: 8px;  height: 8px;  background-color: #3b82f6; }
+#cursor-dot.hover { width: 6px; height: 6px; background-color: #60a5fa; }
+#cursor-ring { width: 32px; height: 32px; border-color: #3b82f6; background-color: rgba(59,130,246,.10); }
+#cursor-ring.hover { width: 56px; height: 56px; border-color: #93c5fd; background-color: rgba(59,130,246,.25); }
+
+/* Lucide svg inherits inline-block */
+svg.lucide { display: inline-block; flex-shrink: 0; }
