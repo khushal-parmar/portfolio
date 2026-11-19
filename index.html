@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khushal Portfolio</title>
+
+    <!-- Tailwind CSS v4 (precompiled, same classes as the original project) + custom CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <div class="bg-[#020617] text-slate-100 min-h-screen selection:bg-blue-600 selection:text-white">
+      <!-- Custom Cursor -->
+<div id="cursor-dot" class="fixed top-0 left-0 pointer-events-none z-[99999] hidden md:block rounded-full shadow-[0_0_10px_#3b82f6]"></div>
+<div id="cursor-ring" class="fixed top-0 left-0 pointer-events-none z-[99998] hidden md:block rounded-full border-2 shadow-[0_0_20px_rgba(59,130,246,0.35)] backdrop-blur-[0.5px]"></div>
+      <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
+  <nav id="navbar" class="w-full px-4 sm:px-8 md:px-12 py-4 transition-all duration-300 bg-transparent border-b border-transparent">
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Brand Name -->
+      <a href="#" class="text-lg sm:text-xl font-extrabold tracking-tight text-white hover:text-blue-400 transition-colors">
+        Khushal Parmar
+      </a>
+
+      <!-- Sliding Blue Pill Navigation -->
+      <div id="nav-desktop" class="relative hidden md:flex items-center gap-1 bg-slate-950/80 p-1.5 rounded-2xl border border-slate-800/80 backdrop-blur-md">
+        <div id="nav-pill" class="absolute top-1.5 bottom-1.5 left-0 w-0 bg-blue-600/25 border border-blue-500/50 rounded-xl shadow-[0_0_15px_rgba(59,130,246,0.3)] pointer-events-none"></div>
+                  <button type="button" data-nav="#about"
+            class="nav-btn relative px-4 py-2 text-xs font-semibold rounded-xl transition-colors duration-200 select-none text-slate-400 hover:text-slate-200">
+            <span class="relative z-10">About</span>
+          </button>
+                  <button type="button" data-nav="#skills"
+            class="nav-btn relative px-4 py-2 text-xs font-semibold rounded-xl transition-colors duration-200 select-none text-slate-400 hover:text-slate-200">
+            <span class="relative z-10">Skills</span>
+          </button>
+                  <button type="button" data-nav="#services"
+            class="nav-btn relative px-4 py-2 text-xs font-semibold rounded-xl transition-colors duration-200 select-none text-slate-400 hover:text-slate-200">
+            <span class="relative z-10">Services</span>
+          </button>
+                  <button type="button" data-nav="#projects"
+            class="nav-btn relative px-4 py-2 text-xs font-semibold rounded-xl transition-colors duration-200 select-none text-slate-400 hover:text-slate-200">
+            <span class="relative z-10">Projects</span>
+          </button>
+                  <button type="button" data-nav="#experience"
+            class="nav-btn relative px-4 py-2 text-xs font-semibold rounded-xl transition-colors duration-200 select-none text-slate-400 hover:text-slate-200">
+            <span class="relative z-10">Experience</span>
+          </button>
+                  <button type="button" data-nav="#contact"
+            class="nav-btn relative px-4 py-2 text-xs font-semibold rounded-xl transition-colors duration-200 select-none text-slate-400 hover:text-slate-200">
+            <span class="relative z-10">Contact</span>
+          </button>
+              </div>
+
+      <!-- Action Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contact" data-nav="#contact"
+          class="flex items-center gap-1.5 text-xs font-semibold px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-md shadow-blue-600/20 active:scale-95">
+          Hire Me <i data-lucide="arrow-up-right" width="14" height="14" class=""></i>        </a>
+      </div>
+
+      <!-- Mobile Toggle Button -->
+      <button id="menu-toggle" type="button"
+        class="md:hidden p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" aria-label="Toggle Menu">
+        <span id="icon-menu"><i data-lucide="menu" width="20" height="20" class=""></i></span>
+        <span id="icon-close" class="hidden"><i data-lucide="x" width="20" height="20" class=""></i></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="hidden md:hidden w-full bg-slate-950/95 border-b border-slate-800 px-6 py-6 shadow-2xl backdrop-blur-2xl flex-col gap-3">
+          <button type="button" data-nav="#about"
+        class="mobile-nav-btn text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-300 hover:text-blue-400 hover:bg-slate-900">
+        About      </button>
+          <button type="button" data-nav="#skills"
+        class="mobile-nav-btn text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-300 hover:text-blue-400 hover:bg-slate-900">
+        Skills      </button>
+          <button type="button" data-nav="#services"
+        class="mobile-nav-btn text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-300 hover:text-blue-400 hover:bg-slate-900">
+        Services      </button>
+          <button type="button" data-nav="#projects"
+        class="mobile-nav-btn text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-300 hover:text-blue-400 hover:bg-slate-900">
+        Projects      </button>
+          <button type="button" data-nav="#experience"
+        class="mobile-nav-btn text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-300 hover:text-blue-400 hover:bg-slate-900">
+        Experience      </button>
+          <button type="button" data-nav="#contact"
+        class="mobile-nav-btn text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-300 hover:text-blue-400 hover:bg-slate-900">
+        Contact      </button>
+        <a href="#contact" data-nav="#contact"
+      class="mt-2 flex items-center justify-center gap-2 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm">
+      Hire Me <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>    </a>
+  </div>
+</header>
+      <main>
+        <section class="relative min-h-[90vh] flex items-center justify-center w-full px-4 sm:px-8 md:px-12 pt-28 pb-16 overflow-hidden">
+  <!-- Royal Blue Background Glow -->
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-blue-600/15 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-7xl mx-auto text-center space-y-8">
+
+    <!-- Status Pill -->
+    <div class="hero-pop inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs text-slate-300 backdrop-blur-xl shadow-lg">
+      <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+      <span>Available for Remote Opportunities &amp; Web Projects</span>
+    </div>
+
+    <!-- Hero Title -->
+    <div class="hero-up space-y-4 max-w-4xl mx-auto" style="animation-delay:.1s">
+      <h1 class="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.2] cursor-default">
+        Designing &amp; Building <br />
+        <span id="typed-text" class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-400"></span>
+        <span class="text-blue-400 font-light animate-pulse ml-1">|</span>
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Hi, I'm <span class="text-slate-100 font-semibold">Khushal Parmar</span>. I build clean, mobile-responsive web interfaces and modern full-stack web applications with interactive user experiences.
+      </p>
+    </div>
+
+    <!-- Animated Marquee -->
+    <div class="relative w-full max-w-5xl mx-auto overflow-hidden py-3 bg-slate-900/30 border border-slate-800/80 rounded-2xl backdrop-blur-md shadow-xl">
+      <div class="absolute left-0 top-0 bottom-0 w-16 md:w-20 bg-gradient-to-r from-[#030712] to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-16 md:w-20 bg-gradient-to-l from-[#030712] to-transparent z-10 pointer-events-none"></div>
+
+      <div class="marquee-track flex gap-4 w-max">
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500 inline-block"><path d="M3 5l5 3v6l-5-3V5z"/><path d="M8 8l6-3 6 3-6 3-6-3z"/><path d="M8 14l6 3 6-3V8"/><path d="M14 11v6"/></svg></span>
+            <span class="tracking-wide">Laravel</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-bold text-indigo-300 text-[11px] leading-none">php</span></span>
+            <span class="tracking-wide">PHP</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-bold text-sky-400 text-[11px] leading-none">sql</span></span>
+            <span class="tracking-wide">MySQL</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-sky-400 inline-block"><path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5 0.76 0.19 1.31 0.74 1.91 1.35C13.39 10.83 14.52 12 17 12c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-0.76-0.19-1.31-0.74-1.91-1.35C15.61 7.17 14.48 6 12 6zm-7 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5 0.76 0.19 1.31 0.74 1.91 1.35C2.39 16.83 3.52 18 6 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-0.76-0.19-1.31-0.74-1.91-1.35C9.61 13.17 8.48 12 6 12z"/></svg></span>
+            <span class="tracking-wide">Tailwind CSS</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-black text-yellow-300 text-[11px] leading-none">JS</span></span>
+            <span class="tracking-wide">JavaScript</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500 inline-block"><path d="M3 5l5 3v6l-5-3V5z"/><path d="M8 8l6-3 6 3-6 3-6-3z"/><path d="M8 14l6 3 6-3V8"/><path d="M14 11v6"/></svg></span>
+            <span class="tracking-wide">Laravel</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-bold text-indigo-300 text-[11px] leading-none">php</span></span>
+            <span class="tracking-wide">PHP</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-bold text-sky-400 text-[11px] leading-none">sql</span></span>
+            <span class="tracking-wide">MySQL</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-sky-400 inline-block"><path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5 0.76 0.19 1.31 0.74 1.91 1.35C13.39 10.83 14.52 12 17 12c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-0.76-0.19-1.31-0.74-1.91-1.35C15.61 7.17 14.48 6 12 6zm-7 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5 0.76 0.19 1.31 0.74 1.91 1.35C2.39 16.83 3.52 18 6 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-0.76-0.19-1.31-0.74-1.91-1.35C9.61 13.17 8.48 12 6 12z"/></svg></span>
+            <span class="tracking-wide">Tailwind CSS</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-black text-yellow-300 text-[11px] leading-none">JS</span></span>
+            <span class="tracking-wide">JavaScript</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500 inline-block"><path d="M3 5l5 3v6l-5-3V5z"/><path d="M8 8l6-3 6 3-6 3-6-3z"/><path d="M8 14l6 3 6-3V8"/><path d="M14 11v6"/></svg></span>
+            <span class="tracking-wide">Laravel</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-bold text-indigo-300 text-[11px] leading-none">php</span></span>
+            <span class="tracking-wide">PHP</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-bold text-sky-400 text-[11px] leading-none">sql</span></span>
+            <span class="tracking-wide">MySQL</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-sky-400 inline-block"><path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5 0.76 0.19 1.31 0.74 1.91 1.35C13.39 10.83 14.52 12 17 12c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-0.76-0.19-1.31-0.74-1.91-1.35C15.61 7.17 14.48 6 12 6zm-7 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5 0.76 0.19 1.31 0.74 1.91 1.35C2.39 16.83 3.52 18 6 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-0.76-0.19-1.31-0.74-1.91-1.35C9.61 13.17 8.48 12 6 12z"/></svg></span>
+            <span class="tracking-wide">Tailwind CSS</span>
+          </div>
+                  <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs sm:text-sm font-mono font-medium text-slate-200 hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-900 transition-colors shadow-md cursor-default whitespace-nowrap">
+            <span class="flex items-center justify-center"><span class="font-mono font-black text-yellow-300 text-[11px] leading-none">JS</span></span>
+            <span class="tracking-wide">JavaScript</span>
+          </div>
+              </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="hero-up flex flex-wrap items-center justify-center gap-4 pt-2" style="animation-delay:.3s">
+      <a href="#projects" class="flex items-center gap-2 px-7 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl shadow-lg shadow-blue-600/25 transition-all active:scale-95">
+        Explore Projects <i data-lucide="arrow-up-right" width="16" height="16" class=""></i>      </a>
+      <a href="#contact" class="px-7 py-3 bg-slate-900/90 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold text-sm rounded-xl transition-all active:scale-95">
+        Get in Touch
+      </a>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="hero-fade flex items-center justify-center gap-4 pt-2 text-slate-400" style="animation-delay:.4s">
+      <a href="https://github.com/kishanpatoriya" target="_blank" rel="noreferrer" class="p-2.5 bg-slate-900 border border-slate-800 rounded-xl hover:text-blue-400 hover:border-blue-500/40 transition-all">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>      </a>
+      <a href="https://www.linkedin.com/in/kishan-patoriya/" target="_blank" rel="noreferrer" class="p-2.5 bg-slate-900 border border-slate-800 rounded-xl hover:text-blue-400 hover:border-blue-500/40 transition-all">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>      </a>
+    </div>
+
+  </div>
+</section>
+        <section id="about" class="py-20 px-4 sm:px-8 md:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <div class="w-full max-w-7xl mx-auto space-y-12">
+
+    <!-- Royal Blue Accent Heading -->
+    <div class="text-center space-y-2">
+      <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight cursor-default select-none">
+        <span class="text-white">About </span>
+        <span class="text-blue-500">Me</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+        Translating complex product requirements into fast, intuitive user experiences.
+      </p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch w-full">
+
+      <!-- Left: Bio & Focus Points -->
+      <div class="lg:col-span-7 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6 backdrop-blur-sm">
+        <div class="space-y-4 text-slate-200 text-base sm:text-lg leading-relaxed">
+          <p>
+            Hi, I'm <span class="text-white font-bold">Khushal Parmar</span>, a Laravel full stack developer focused on engineering complete, responsive web applications.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            I specialize in bridging the gap between polished UI aesthetics and solid backend logic—ensuring code remains clean, maintainable, and reliable under real-world usage.
+          </p>
+        </div>
+
+        <!-- Core Focus Points -->
+        <div class="space-y-3 pt-4 border-t border-slate-800/80">
+                      <div class="flex items-center gap-3 text-sm sm:text-base text-slate-200">
+              <i data-lucide="circle-check" width="18" height="18" class="text-blue-400 shrink-0"></i>              <span>Clean, scalable, and modular component architecture</span>
+            </div>
+                      <div class="flex items-center gap-3 text-sm sm:text-base text-slate-200">
+              <i data-lucide="circle-check" width="18" height="18" class="text-blue-400 shrink-0"></i>              <span>Fluid animations with focus on zero layout shifts</span>
+            </div>
+                      <div class="flex items-center gap-3 text-sm sm:text-base text-slate-200">
+              <i data-lucide="circle-check" width="18" height="18" class="text-blue-400 shrink-0"></i>              <span>Secure REST endpoints with optimized database queries</span>
+            </div>
+                  </div>
+
+        <div class="pt-2">
+          <a href="#projects" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors uppercase tracking-wider font-mono">
+            View Featured Work <i data-lucide="arrow-right" width="16" height="16" class=""></i>          </a>
+        </div>
+      </div>
+
+      <!-- Right: Feature Cards -->
+      <div class="lg:col-span-5 flex flex-col justify-between gap-4">
+                  <div class="p-6 bg-slate-900/30 border border-slate-800/70 rounded-2xl flex items-start gap-4 hover:border-blue-500/40 hover:bg-slate-900/50 transition-all duration-200 shadow-sm">
+            <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl shrink-0">
+              <i data-lucide="laptop" width="24" height="24" class="text-blue-400"></i>            </div>
+            <div class="space-y-1">
+              <h4 class="text-base sm:text-lg font-bold text-slate-100">Frontend Engineering</h4>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Pixel-perfect, fluid web interfaces developed with Blade templates and modern Tailwind design systems.</p>
+            </div>
+          </div>
+                  <div class="p-6 bg-slate-900/30 border border-slate-800/70 rounded-2xl flex items-start gap-4 hover:border-blue-500/40 hover:bg-slate-900/50 transition-all duration-200 shadow-sm">
+            <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl shrink-0">
+              <i data-lucide="database" width="24" height="24" class="text-blue-400"></i>            </div>
+            <div class="space-y-1">
+              <h4 class="text-base sm:text-lg font-bold text-slate-100">Backend Development</h4>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Building clean RESTful APIs, secure authentication, and database integration using Laravel, PHP, and MySQL.</p>
+            </div>
+          </div>
+                  <div class="p-6 bg-slate-900/30 border border-slate-800/70 rounded-2xl flex items-start gap-4 hover:border-blue-500/40 hover:bg-slate-900/50 transition-all duration-200 shadow-sm">
+            <div class="p-3 bg-slate-950 border border-slate-800 rounded-xl shrink-0">
+              <i data-lucide="sparkles" width="24" height="24" class="text-blue-400"></i>            </div>
+            <div class="space-y-1">
+              <h4 class="text-base sm:text-lg font-bold text-slate-100">Product Experience</h4>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">End-to-end web apps tailored for performance, fast render speeds, and seamless interactions.</p>
+            </div>
+          </div>
+              </div>
+
+    </div>
+
+    <!-- What I Build Card -->
+    <div class="bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-sm space-y-6">
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">What I Build</h3>
+      <div class="flex flex-wrap gap-3">
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            Bank Management System          </span>
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            Expense Tracker App          </span>
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            Restaurant Management          </span>
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            Admin Dashboard          </span>
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            Food Menu          </span>
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            E-Commerce          </span>
+                  <span class="px-5 py-2.5 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/60 transition-all text-sm font-medium shadow-sm cursor-default">
+            Custom Web Applications          </span>
+              </div>
+    </div>
+
+    <!-- Full-Width Metrics Row -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+      <div class="p-5 sm:p-6 bg-slate-900/30 border border-slate-800/80 rounded-xl text-center">
+        <p class="text-3xl sm:text-4xl font-extrabold text-blue-500">5+</p>
+        <p class="text-xs sm:text-sm text-slate-300 mt-1 uppercase font-mono tracking-wider">Live Applications</p>
+      </div>
+      <div class="p-5 sm:p-6 bg-slate-900/30 border border-slate-800/80 rounded-xl text-center">
+        <p class="text-3xl sm:text-4xl font-extrabold text-blue-500">Laravel</p>
+        <p class="text-xs sm:text-sm text-slate-300 mt-1 uppercase font-mono tracking-wider">Stack Specialization</p>
+      </div>
+      <div class="p-5 sm:p-6 bg-slate-900/30 border border-slate-800/80 rounded-xl text-center">
+        <p class="text-3xl sm:text-4xl font-extrabold text-blue-500">100%</p>
+        <p class="text-xs sm:text-sm text-slate-300 mt-1 uppercase font-mono tracking-wider">Mobile Optimized</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+        <section id="skills" class="py-24 px-4 sm:px-8 md:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <!-- Background Radial Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-7xl mx-auto space-y-14">
+
+    <!-- Header -->
+    <div class="text-center space-y-2">
+      <h2 class="reveal text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight select-none cursor-default">
+        <span class="text-white">Technical </span>
+        <span class="text-blue-500">Skills</span>
+      </h2>
+      <p class="reveal text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto" style="--ry:15px;--delay:.1s">
+        Core technologies, backend environments, and deployment tools I work with.
+      </p>
+    </div>
+
+    <!-- Clean Responsive Card Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              <div class="reveal" style="--rd:.4s;--delay:0s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <svg class="w-8 h-8 text-[#FF2D20]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5l5 3v6l-5-3V5z"/><path d="M8 8l6-3 6 3-6 3-6-3z"/><path d="M8 14l6 3 6-3V8"/><path d="M14 11v6"/></svg>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">Laravel</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Framework</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.03s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded-xl bg-[#777BB4] text-white font-bold text-xs flex items-center justify-center font-mono shadow-sm">PHP</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">PHP</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Backend</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.06s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded bg-[#00758F] text-white font-black text-xs flex items-center justify-center font-mono shadow-sm">SQL</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">MySQL</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Database</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.09s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded bg-[#F7DF1E] text-slate-950 font-black text-xs flex items-center justify-center font-mono shadow-sm">JS</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">JavaScript</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Language</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.12s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <svg class="w-8 h-8 text-[#21759B]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.7-1.5l3.9-11.3 2.8 8.2.8-2.6-1.6-4.6 2.6-.1a8.2 8.2 0 0 1-3.8 11.9zm6.4-5.3l-2.4-7a5.5 5.5 0 0 0 .5-.1 8.2 8.2 0 0 1 1.9 7.1zM8 8.8l-2.8 8.1A8.2 8.2 0 0 1 3.8 12c0-2 .7-3.8 1.9-5.3l2.3 2.1zm2.3-4.5A8.2 8.2 0 0 1 12 3.8a8.2 8.2 0 0 1 5.2 1.9l-2.3 6.6-2.6-7.5-.1-.1a5.6 5.6 0 0 0-1.9-.4z"/></svg>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">WordPress</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">CMS</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.15s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <svg class="w-8 h-8 text-[#06B6D4]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 6c-2.4 0-3.9 1.2-4.5 3.6 1-.8 2-1.1 3-.7.6.2 1 .7 1.5 1.3 1.4 1.5 3 3.3 6 3.3 2.4 0 3.9-1.2 4.5-3.6-1 .8-2 1.1-3 .7-.6-.2-1-.7-1.5-1.3-1.4-1.5-3-3.3-6-3.3zm-6 6c-2.4 0-3.9 1.2-4.5 3.6 1-.8 2-1.1 3-.7.6.2 1 .7 1.5 1.3 1.4 1.5 3 3.3 6 3.3 2.4 0 3.9-1.2 4.5-3.6-1 .8-2 1.1-3 .7-.6-.2-1-.7-1.5-1.3-1.4-1.5-3-3.3-6-3.3z"/></svg>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">Tailwind CSS</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Styling</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.18s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded bg-[#E34F26] text-white font-bold text-xs flex items-center justify-center font-mono shadow-sm">H5</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">HTML5</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Markup</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.21s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded bg-[#1572B6] text-white font-bold text-xs flex items-center justify-center font-mono shadow-sm">C3</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">CSS3</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Styling</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.24s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <svg class="w-8 h-8 text-slate-100" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">Git &amp; GitHub</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Version Control</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.27s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 text-white font-black text-[10px] flex items-center justify-center font-mono shadow-sm">JWT</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">JWT Auth</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Security</span>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--rd:.4s;--delay:0.3s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 flex flex-col items-center justify-center gap-3 backdrop-blur-sm hover:border-blue-500/50 hover:bg-slate-900/80 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-[5px] transition-all duration-200 select-none cursor-default">
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+              <span class="w-8 h-8 rounded-full bg-[#673AB7] text-white font-black text-sm flex items-center justify-center font-mono shadow-sm">H</span>            </div>
+
+            <!-- Text Info -->
+            <div class="text-center">
+              <h4 class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">Hostinger</h4>
+              <span class="text-[11px] font-mono text-slate-400 tracking-wide">Hosting</span>
+            </div>
+          </div>
+        </div>
+          </div>
+
+  </div>
+</section>
+        <section class="py-12 px-4 sm:px-8 md:px-12 bg-[#020617] text-white w-full">
+  <div class="w-full max-w-7xl mx-auto space-y-6">
+    <!-- Section Label -->
+    <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-slate-400 uppercase">
+      <i data-lucide="award" width="14" height="14" class="text-blue-500"></i>      <span>Verified Credentials &amp; Corporate Workshops</span>
+    </div>
+
+    <!-- Clickable Brand Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a href="https://www.linkedin.com/in/kishan-patoriya/overlay/Certifications/1475832431/treasury/?profileId=ACoAAFqLmOABjivKRKZit0LRwRFbhtcBVpHEljA" target="_blank" rel="noreferrer"
+           aria-label="View Data Management Workshop certificate"
+           class="group block bg-slate-900/30 border border-slate-800/80 rounded-2xl p-5 hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
+          <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <!-- Brand Logo -->
+              <div class="w-11 h-11 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center shrink-0 group-hover:border-slate-700 transition-colors overflow-hidden">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 21 21" fill="none"><rect x="1" y="1" width="9" height="9" fill="#F25022"/><rect x="11" y="1" width="9" height="9" fill="#7FBA00"/><rect x="1" y="11" width="9" height="9" fill="#00A4EF"/><rect x="11" y="11" width="9" height="9" fill="#FFB900"/></svg>              </div>
+
+              <!-- Title & Tag -->
+              <div class="truncate">
+                <h4 class="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition-colors leading-snug truncate">Data Management Workshop</h4>
+                <p class="text-xs text-slate-400 mt-0.5 truncate">
+                  Microsoft • <span class="text-blue-400/80">Data &amp; Architecture</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- External Indicator Arrow -->
+            <div class="p-1 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0">
+              <i data-lucide="arrow-up-right" width="17" height="17" class=""></i>            </div>
+          </div>
+        </a>
+              <a href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_68c65e1681edf82e82b9df33_1760683505345_completion_certificate.pdf" target="_blank" rel="noreferrer"
+           aria-label="View CyberSecurity Forensic Analyst (CSFA) certificate"
+           class="group block bg-slate-900/30 border border-slate-800/80 rounded-2xl p-5 hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
+          <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <!-- Brand Logo -->
+              <div class="w-11 h-11 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center shrink-0 group-hover:border-slate-700 transition-colors overflow-hidden">
+                <div class="w-full h-full bg-white rounded-lg flex flex-col items-center justify-center p-1 select-none"><div class="flex flex-col items-center leading-[0.8] tracking-tight"><span class="text-[7.5px] font-black tracking-[0.14em] text-black">TATA</span><span class="text-[4.8px] font-extrabold tracking-tight text-black mt-[1.5px]">CONSULTANCY</span><span class="text-[5px] font-extrabold tracking-tight text-black mt-[0.5px]">SERVICES</span></div><div class="text-[11px] font-black text-black tracking-[-0.08em] leading-none mt-1 font-sans">tcs</div></div>              </div>
+
+              <!-- Title & Tag -->
+              <div class="truncate">
+                <h4 class="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition-colors leading-snug truncate">CyberSecurity Forensic Analyst (CSFA)</h4>
+                <p class="text-xs text-slate-400 mt-0.5 truncate">
+                  Tata Consultancy Services (TCS) • <span class="text-blue-400/80">Security Standards</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- External Indicator Arrow -->
+            <div class="p-1 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0">
+              <i data-lucide="arrow-up-right" width="17" height="17" class=""></i>            </div>
+          </div>
+        </a>
+              <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_68c65e1681edf82e82b9df33_1784990641082_completion_certificate.pdf" target="_blank" rel="noreferrer"
+           aria-label="View Cyber Job Simulation certificate"
+           class="group block bg-slate-900/30 border border-slate-800/80 rounded-2xl p-5 hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer">
+          <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <!-- Brand Logo -->
+              <div class="w-11 h-11 rounded-xl bg-slate-950 border border-slate-800/90 flex items-center justify-center shrink-0 group-hover:border-slate-700 transition-colors overflow-hidden">
+                <div class="flex items-center text-white font-black text-sm tracking-tight select-none"><span>D</span><span class="w-1.5 h-1.5 rounded-full bg-[#86BC25] ml-0.5 mt-2"></span></div>              </div>
+
+              <!-- Title & Tag -->
+              <div class="truncate">
+                <h4 class="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition-colors leading-snug truncate">Cyber Job Simulation</h4>
+                <p class="text-xs text-slate-400 mt-0.5 truncate">
+                  Deloitte Australia (Forage) • <span class="text-blue-400/80">Industry Simulation</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- External Indicator Arrow -->
+            <div class="p-1 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0">
+              <i data-lucide="arrow-up-right" width="17" height="17" class=""></i>            </div>
+          </div>
+        </a>
+          </div>
+  </div>
+</section>
+        <section id="services" class="py-20 sm:py-24 px-4 sm:px-8 md:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <!-- Background Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-7xl mx-auto space-y-14 sm:space-y-16">
+    <!-- Section Header -->
+    <div class="text-center space-y-2">
+      <h2 class="reveal text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight select-none cursor-default">
+        <span class="text-white">What I </span>
+        <span class="text-blue-500">Offer</span>
+      </h2>
+      <p class="reveal text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto" style="--ry:15px;--delay:.1s">
+        End-to-end web engineering, modern client portals, and custom web applications.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="reveal" style="--ry:25px;--rd:.45s;--delay:0s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-5 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 backdrop-blur-sm">
+            <div class="space-y-3.5">
+              <!-- Icon aur Title side-by-side -->
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-blue-500/40 group-hover:scale-105 transition-all">
+                  <i data-lucide="code-xml" width="24" height="24" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-400"></i>                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                  Full-Stack Web Development                </h3>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Building scalable, secure web apps from scratch using Laravel, PHP, and MySQL with modern REST API architectures.</p>
+            </div>
+
+            <div class="pt-4 sm:pt-5 mt-4 border-t border-slate-800/60">
+              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
+                Discuss Project <i data-lucide="arrow-up-right" width="14" height="14" class=""></i>              </a>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:25px;--rd:.45s;--delay:0.08s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-5 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 backdrop-blur-sm">
+            <div class="space-y-3.5">
+              <!-- Icon aur Title side-by-side -->
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-blue-500/40 group-hover:scale-105 transition-all">
+                  <i data-lucide="globe" width="24" height="24" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-400"></i>                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                  WordPress &amp; CMS Solutions                </h3>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Custom WordPress design, Elementor layout configuration, plugin setup, speed optimization, and responsive business pages.</p>
+            </div>
+
+            <div class="pt-4 sm:pt-5 mt-4 border-t border-slate-800/60">
+              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
+                Discuss Project <i data-lucide="arrow-up-right" width="14" height="14" class=""></i>              </a>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:25px;--rd:.45s;--delay:0.16s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-5 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 backdrop-blur-sm">
+            <div class="space-y-3.5">
+              <!-- Icon aur Title side-by-side -->
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-blue-500/40 group-hover:scale-105 transition-all">
+                  <i data-lucide="smartphone" width="24" height="24" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-400"></i>                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                  Frontend UI/UX &amp; Responsive Web                </h3>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Converting Figma/XD designs into clean Tailwind CSS and Laravel Blade code with pixel-perfect responsive behavior across mobile and desktop.</p>
+            </div>
+
+            <div class="pt-4 sm:pt-5 mt-4 border-t border-slate-800/60">
+              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
+                Discuss Project <i data-lucide="arrow-up-right" width="14" height="14" class=""></i>              </a>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:25px;--rd:.45s;--delay:0.24s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-5 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 backdrop-blur-sm">
+            <div class="space-y-3.5">
+              <!-- Icon aur Title side-by-side -->
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-blue-500/40 group-hover:scale-105 transition-all">
+                  <i data-lucide="database" width="24" height="24" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-400"></i>                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                  API Design &amp; Database Modeling                </h3>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Structuring MySQL relational databases, Eloquent models and migrations, secure authentication workflows, and robust server-side routing.</p>
+            </div>
+
+            <div class="pt-4 sm:pt-5 mt-4 border-t border-slate-800/60">
+              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
+                Discuss Project <i data-lucide="arrow-up-right" width="14" height="14" class=""></i>              </a>
+            </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:25px;--rd:.45s;--delay:0.32s">
+          <div class="group relative h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-5 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 backdrop-blur-sm">
+            <div class="space-y-3.5">
+              <!-- Icon aur Title side-by-side -->
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-blue-500/40 group-hover:scale-105 transition-all">
+                  <i data-lucide="wrench" width="24" height="24" class="w-5 h-5 sm:w-6 sm:h-6 text-blue-400"></i>                </div>
+                <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                  Website Maintenance &amp; Bug Fixing                </h3>
+              </div>
+
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Code refactoring, responsive design bug fixes, performance boosting, and deployment assistance on cPanel or cloud hosts.</p>
+            </div>
+
+            <div class="pt-4 sm:pt-5 mt-4 border-t border-slate-800/60">
+              <a href="#contact" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
+                Discuss Project <i data-lucide="arrow-up-right" width="14" height="14" class=""></i>              </a>
+            </div>
+          </div>
+        </div>
+          </div>
+  </div>
+</section>
+        <section id="projects" class="py-24 px-4 sm:px-8 md:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-7xl mx-auto space-y-16">
+    <div class="text-center space-y-2">
+      <h2 class="reveal text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight select-none cursor-default">
+        <span class="text-white">Featured </span>
+        <span class="text-blue-500">Works</span>
+      </h2>
+      <p class="reveal text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto" style="--ry:15px;--delay:.1s">
+        Production web applications, management portals, and client platforms engineered with modern web stacks.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="reveal" style="--ry:30px;--delay:0s">
+          <div class="group h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 backdrop-blur-sm shadow-xl">
+            <div class="space-y-5">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                <div class="absolute top-0 left-0 right-0 z-20 h-8 px-4 bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 truncate max-w-[180px]">real-estate-portal.live</span>
+                </div>
+
+                <img src="assets/projects/real-estate.png" alt="Real Estate Portal" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80';"
+                     class="w-full h-full object-cover pt-8 transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 pt-8 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Real Estate Portal</h3>
+                <p class="text-slate-300 text-sm leading-relaxed line-clamp-3">Interactive real estate platform for property exploration, listing filters, and property detail views.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">React.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Node.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Express.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">MongoDB</span>
+                              </div>
+            </div>
+
+            <!-- Buttons Action Area -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80">
+                              <!-- Non-WordPress: Live Preview + Request Demo Buttons Side-by-Side -->
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="https://real-estate-5-hello.onrender.com/" target="_blank" rel="noreferrer"
+                     class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 text-center cursor-pointer">
+                    Live Preview <i data-lucide="external-link" width="14" height="14" class=""></i>                  </a>
+                  <button type="button" data-demo="Real Estate Portal"
+                    class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer text-center">
+                    Request Demo <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>                  </button>
+                </div>
+                          </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:30px;--delay:0.1s">
+          <div class="group h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 backdrop-blur-sm shadow-xl">
+            <div class="space-y-5">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                <div class="absolute top-0 left-0 right-0 z-20 h-8 px-4 bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 truncate max-w-[180px]">hotel-booking-system.live</span>
+                </div>
+
+                <img src="assets/projects/hotel-booking.jpeg" alt="Hotel Booking System" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80';"
+                     class="w-full h-full object-cover pt-8 transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 pt-8 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Hotel Booking System</h3>
+                <p class="text-slate-300 text-sm leading-relaxed line-clamp-3">Full-stack hotel booking platform with real-time room browsing, detail pages, offers, and booking APIs.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">React.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Node.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Express.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">MongoDB</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Figma</span>
+                              </div>
+            </div>
+
+            <!-- Buttons Action Area -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80">
+                              <!-- Non-WordPress: Live Preview + Request Demo Buttons Side-by-Side -->
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="https://your-hotel-booking.vercel.app" target="_blank" rel="noreferrer"
+                     class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 text-center cursor-pointer">
+                    Live Preview <i data-lucide="external-link" width="14" height="14" class=""></i>                  </a>
+                  <button type="button" data-demo="Hotel Booking System"
+                    class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer text-center">
+                    Request Demo <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>                  </button>
+                </div>
+                          </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:30px;--delay:0.2s">
+          <div class="group h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 backdrop-blur-sm shadow-xl">
+            <div class="space-y-5">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                <div class="absolute top-0 left-0 right-0 z-20 h-8 px-4 bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 truncate max-w-[180px]">neelkanth-electronics.live</span>
+                </div>
+
+                <img src="assets/projects/ecommerce.png" alt="Neelkanth Electronics" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80';"
+                     class="w-full h-full object-cover pt-8 transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 pt-8 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Neelkanth Electronics</h3>
+                <p class="text-slate-300 text-sm leading-relaxed line-clamp-3">Modern e-commerce platform for home appliances featuring dynamic category filtering, shopping cart management, and seamless order flow.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">React.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Node.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Express.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">MongoDB</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Tailwind CSS</span>
+                              </div>
+            </div>
+
+            <!-- Buttons Action Area -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80">
+                              <!-- Non-WordPress: Live Preview + Request Demo Buttons Side-by-Side -->
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="https://neelkanth-electrical.onrender.com" target="_blank" rel="noreferrer"
+                     class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 text-center cursor-pointer">
+                    Live Preview <i data-lucide="external-link" width="14" height="14" class=""></i>                  </a>
+                  <button type="button" data-demo="Neelkanth Electronics"
+                    class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer text-center">
+                    Request Demo <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>                  </button>
+                </div>
+                          </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:30px;--delay:0.3s">
+          <div class="group h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 backdrop-blur-sm shadow-xl">
+            <div class="space-y-5">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                <div class="absolute top-0 left-0 right-0 z-20 h-8 px-4 bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 truncate max-w-[180px]">smart-resale.live</span>
+                </div>
+
+                <img src="assets/projects/smart-resale.png" alt="Smart Resale" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80';"
+                     class="w-full h-full object-cover pt-8 transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 pt-8 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Smart Resale</h3>
+                <p class="text-slate-300 text-sm leading-relaxed line-clamp-3">A dynamic buy-and-sell marketplace built with PHP and MySQL. Features secure user authentication, product listings with image uploads, category filtering, and an integrated admin moderation panel.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">PHP</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">MySQL</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">JavaScript</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">HTML5</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">CSS3</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Bootstrap</span>
+                              </div>
+            </div>
+
+            <!-- Buttons Action Area -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80">
+                              <!-- Non-WordPress: Live Preview + Request Demo Buttons Side-by-Side -->
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="https://smartresale.infy.click/" target="_blank" rel="noreferrer"
+                     class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 text-center cursor-pointer">
+                    Live Preview <i data-lucide="external-link" width="14" height="14" class=""></i>                  </a>
+                  <button type="button" data-demo="Smart Resale"
+                    class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer text-center">
+                    Request Demo <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>                  </button>
+                </div>
+                          </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:30px;--delay:0.4s">
+          <div class="group h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 backdrop-blur-sm shadow-xl">
+            <div class="space-y-5">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                <div class="absolute top-0 left-0 right-0 z-20 h-8 px-4 bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 truncate max-w-[180px]">corporate-it-company-website.live</span>
+                </div>
+
+                <img src="assets/projects/corporate-it.png" alt="Corporate IT Company Website" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80';"
+                     class="w-full h-full object-cover pt-8 transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 pt-8 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Corporate IT Company Website</h3>
+                <p class="text-slate-300 text-sm leading-relaxed line-clamp-3">Enterprise web application featuring service catalogs, case studies, career portals, and sleek UI animations.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">React.js</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Vite</span>
+                              </div>
+            </div>
+
+            <!-- Buttons Action Area -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80">
+                              <!-- Non-WordPress: Live Preview + Request Demo Buttons Side-by-Side -->
+                <div class="grid grid-cols-2 gap-3">
+                  <a href="https://sharpstar-tech.vercel.app/" target="_blank" rel="noreferrer"
+                     class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 text-center cursor-pointer">
+                    Live Preview <i data-lucide="external-link" width="14" height="14" class=""></i>                  </a>
+                  <button type="button" data-demo="Corporate IT Company Website"
+                    class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer text-center">
+                    Request Demo <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>                  </button>
+                </div>
+                          </div>
+          </div>
+        </div>
+              <div class="reveal" style="--ry:30px;--delay:0.5s">
+          <div class="group h-full bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-300 backdrop-blur-sm shadow-xl">
+            <div class="space-y-5">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                <div class="absolute top-0 left-0 right-0 z-20 h-8 px-4 bg-slate-950/90 border-b border-slate-800/80 backdrop-blur-md flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 truncate max-w-[180px]">home-services-&amp;-maintenance.live</span>
+                </div>
+
+                <img src="assets/projects/home-services.png" alt="Home Services &amp; Maintenance" loading="lazy"
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80';"
+                     class="w-full h-full object-cover pt-8 transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 pt-8 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Home Services &amp; Maintenance</h3>
+                <p class="text-slate-300 text-sm leading-relaxed line-clamp-3">Professional handyman and maintenance service portal designed in WordPress. Features dedicated service catalogs, instant quote inquiries, customer trust metrics, and responsive mobile-first UI.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-1">
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">WordPress</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Elementor</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">PHP</span>
+                                  <span class="text-xs px-3 py-1 bg-slate-950 border border-slate-800 text-blue-400 rounded-lg font-mono font-medium">Responsive UI</span>
+                              </div>
+            </div>
+
+            <!-- Buttons Action Area -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80">
+                              <!-- WordPress: Only Request a Demo Button -->
+                <button type="button" data-demo="Home Services &amp; Maintenance"
+                  class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 cursor-pointer">
+                  Request a Demo <i data-lucide="arrow-up-right" width="15" height="15" class=""></i>                </button>
+                          </div>
+          </div>
+        </div>
+          </div>
+  </div>
+
+  <!-- Modal Popup -->
+  <div id="demo-modal" class="fixed inset-0 z-[60] items-center justify-center p-4">
+    <div id="modal-backdrop" class="modal-backdrop absolute inset-0 bg-[#020617]/85 backdrop-blur-md cursor-pointer"></div>
+
+    <div class="modal-card relative w-full max-w-md bg-[#0b1329] border border-slate-800/90 rounded-[2rem] p-7 sm:p-9 shadow-2xl shadow-blue-950/50 z-[70] space-y-6 overflow-hidden">
+      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-64 h-32 bg-blue-600/20 blur-3xl pointer-events-none"></div>
+
+      <button type="button" id="modal-close"
+        class="absolute top-5 right-5 p-2 text-slate-400 hover:text-white rounded-full bg-slate-900/60 border border-slate-800 hover:bg-slate-800 transition-all cursor-pointer z-20"
+        aria-label="Close dialog">
+        <i data-lucide="x" width="18" height="18" class=""></i>      </button>
+
+      <div class="space-y-1.5 pr-8 relative z-10">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Request Demo</h3>
+        <p class="text-xs sm:text-sm text-slate-400">
+          Requesting demo for:
+          <span id="modal-project" class="text-blue-400 font-semibold"></span>
+        </p>
+      </div>
+
+      <form id="demo-form" class="space-y-4 relative z-10">
+        <div>
+          <input type="text" name="name" required placeholder="Your Name"
+            class="w-full px-4 py-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/50 transition-all" />
+        </div>
+        <div>
+          <input type="email" name="email" required placeholder="Your Email"
+            class="w-full px-4 py-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/50 transition-all" />
+        </div>
+        <div>
+          <textarea name="message" rows="4" required placeholder="Tell me about your interest in this project"
+            class="w-full px-4 py-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/50 transition-all resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="demo-submit"
+          class="w-full py-3.5 sm:py-4 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-blue-600/30 active:scale-[0.98] disabled:opacity-75 flex items-center justify-center gap-2 cursor-pointer">
+          <span data-state="idle">Send Request</span>
+          <span data-state="sending" class="hidden items-center gap-2"><i data-lucide="loader-circle" width="18" height="18" class="animate-spin"></i> Sending Request...</span>
+          <span data-state="success" class="hidden items-center gap-2"><i data-lucide="circle-check" width="18" height="18" class="text-emerald-300"></i> Request Sent!</span>
+        </button>
+
+        <p id="demo-error" class="hidden text-xs text-rose-400 text-center pt-1">
+          Failed to send request. Please email directly at kishanpatoriya2007@gmail.com        </p>
+      </form>
+    </div>
+  </div>
+</section>
+        <section id="experience" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <!-- Background Radial Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[500px] lg:w-[650px] h-[300px] lg:h-[350px] bg-blue-600/10 blur-[100px] lg:blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-7xl mx-auto space-y-12 sm:space-y-16">
+    <!-- Section Header -->
+    <div class="text-center space-y-2 sm:space-y-3 px-2">
+      <h2 class="reveal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight select-none cursor-default">
+        <span class="text-white">Career </span>
+        <span class="text-blue-500">Journey</span>
+      </h2>
+      <p class="reveal text-slate-400 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto" style="--ry:15px;--delay:.1s">
+        Professional milestones, engineering contributions, and hands-on production roles.
+      </p>
+    </div>
+
+    <!-- Responsive Timeline Container -->
+    <div class="relative max-w-5xl mx-auto">
+      <!-- Vertical Line -->
+      <div class="absolute left-4 sm:left-6 lg:left-1/2 top-4 bottom-4 w-0.5 -translate-x-1/2 bg-gradient-to-b from-blue-500 via-blue-500/40 to-transparent pointer-events-none"></div>
+
+      <div class="space-y-8 sm:space-y-12 lg:space-y-14">
+                  <div class="reveal relative flex flex-col lg:flex-row items-start lg:flex-row-reverse" style="--ry:25px;--rd:.45s;--delay:0s">
+            <!-- Timeline Center Node -->
+            <div class="absolute left-4 sm:left-6 lg:left-1/2 top-5 sm:top-6 -translate-x-1/2 z-20 flex items-center justify-center">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-950 border-2 border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.6)]">
+                <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-400 animate-pulse"></div>
+              </div>
+            </div>
+
+            <!-- Experience Card -->
+            <div class="w-[calc(100%-2.75rem)] sm:w-[calc(100%-4rem)] ml-11 sm:ml-16 lg:ml-0 lg:w-[calc(50%-2.5rem)] lg:mr-auto">
+              <div class="group bg-slate-900/40 border border-slate-800/80 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-7 backdrop-blur-md hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
+
+                <!-- Period Badge & Calculated Duration -->
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <div class="flex items-center gap-1.5 text-[11px] sm:text-xs font-mono font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 sm:px-3 py-1 rounded-full w-fit">
+                    <i data-lucide="calendar" width="12" height="12" class="shrink-0"></i>                    <span>6 Months</span>
+                  </div>
+
+                                  </div>
+
+                <!-- Role & Company -->
+                <div class="space-y-1.5">
+                  <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors flex items-center gap-2">
+                    <i data-lucide="briefcase" width="16" height="16" class="text-blue-500 shrink-0"></i>                    <span class="leading-snug">Laravel Full Stack Developer</span>
+                  </h3>
+
+                  <div class="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm font-medium">
+                    <i data-lucide="building-2" width="14" height="14" class="text-slate-500 shrink-0"></i>                    <span>MDIDM Infoway</span>
+                  </div>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-3.5 sm:mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-3.5 sm:pt-4">Developing end-to-end full stack web applications using Laravel, PHP, and MySQL, from responsive UI to secure backend and database.</p>
+              </div>
+            </div>
+          </div>
+                  <div class="reveal relative flex flex-col lg:flex-row items-start " style="--ry:25px;--rd:.45s;--delay:0.1s">
+            <!-- Timeline Center Node -->
+            <div class="absolute left-4 sm:left-6 lg:left-1/2 top-5 sm:top-6 -translate-x-1/2 z-20 flex items-center justify-center">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-950 border-2 border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.6)]">
+                <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-400 animate-pulse"></div>
+              </div>
+            </div>
+
+            <!-- Experience Card -->
+            <div class="w-[calc(100%-2.75rem)] sm:w-[calc(100%-4rem)] ml-11 sm:ml-16 lg:ml-0 lg:w-[calc(50%-2.5rem)] lg:ml-auto">
+              <div class="group bg-slate-900/40 border border-slate-800/80 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-7 backdrop-blur-md hover:border-blue-500/50 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
+
+                <!-- Period Badge & Calculated Duration -->
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <div class="flex items-center gap-1.5 text-[11px] sm:text-xs font-mono font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2.5 sm:px-3 py-1 rounded-full w-fit">
+                    <i data-lucide="calendar" width="12" height="12" class="shrink-0"></i>                    <span>8 Months</span>
+                  </div>
+
+                                  </div>
+
+                <!-- Role & Company -->
+                <div class="space-y-1.5">
+                  <h3 class="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors flex items-center gap-2">
+                    <i data-lucide="briefcase" width="16" height="16" class="text-blue-500 shrink-0"></i>                    <span class="leading-snug">Laravel Developer</span>
+                  </h3>
+
+                  <div class="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm font-medium">
+                    <i data-lucide="building-2" width="14" height="14" class="text-slate-500 shrink-0"></i>                    <span>Shivansh Software Solutions</span>
+                  </div>
+                </div>
+
+                <!-- Description -->
+                <p class="mt-3.5 sm:mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-3.5 sm:pt-4">Building and maintaining Laravel web applications with Blade, REST APIs, and MySQL database-driven features.</p>
+              </div>
+            </div>
+          </div>
+              </div>
+    </div>
+  </div>
+</section>
+        <section id="why-choose-me" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <!-- Background Soft Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[300px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+
+  <!-- Navbar ke exact same container width (max-w-7xl) -->
+  <div class="w-full max-w-7xl mx-auto">
+    <div class="reveal w-full relative bg-[#0d111c]/90 border border-slate-800/80 rounded-[2.2rem] p-8 sm:p-12 lg:p-16 backdrop-blur-md shadow-2xl overflow-hidden" style="--ry:30px">
+      <!-- Ambient Corner Highlight -->
+      <div class="absolute -top-24 -left-24 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+
+        <!-- Left Column: Heading & Text -->
+        <div class="lg:col-span-5 space-y-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">Why Choose Me?</h2>
+          <p class="text-slate-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
+            I don't just write code; I solve business problems. When you hire me, you get a technical partner invested in your project's success.
+          </p>
+        </div>
+
+        <!-- Right Column: Stacked Pills -->
+        <div class="lg:col-span-7 flex flex-col gap-3.5 sm:gap-4 w-full">
+                      <div class="reveal flex items-center gap-3.5 sm:gap-4 px-5 py-4 sm:py-5 rounded-2xl bg-[#131926]/90 border border-slate-800/70 hover:border-slate-700 hover:bg-[#161e2e]" style="--ry:0px;--rx:20px;--rd:.4s;--delay:0s">
+              <svg class="w-5 h-5 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-xs sm:text-sm md:text-[15px] font-medium text-slate-200 tracking-wide">Clean, scalable, and maintainable code architecture.</span>
+            </div>
+                      <div class="reveal flex items-center gap-3.5 sm:gap-4 px-5 py-4 sm:py-5 rounded-2xl bg-[#131926]/90 border border-slate-800/70 hover:border-slate-700 hover:bg-[#161e2e]" style="--ry:0px;--rx:20px;--rd:.4s;--delay:0.08s">
+              <svg class="w-5 h-5 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-xs sm:text-sm md:text-[15px] font-medium text-slate-200 tracking-wide">Reliable delivery with strict adherence to deadlines.</span>
+            </div>
+                      <div class="reveal flex items-center gap-3.5 sm:gap-4 px-5 py-4 sm:py-5 rounded-2xl bg-[#131926]/90 border border-slate-800/70 hover:border-slate-700 hover:bg-[#161e2e]" style="--ry:0px;--rx:20px;--rd:.4s;--delay:0.16s">
+              <svg class="w-5 h-5 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-xs sm:text-sm md:text-[15px] font-medium text-slate-200 tracking-wide">Fast, transparent, and proactive communication.</span>
+            </div>
+                      <div class="reveal flex items-center gap-3.5 sm:gap-4 px-5 py-4 sm:py-5 rounded-2xl bg-[#131926]/90 border border-slate-800/70 hover:border-slate-700 hover:bg-[#161e2e]" style="--ry:0px;--rx:20px;--rd:.4s;--delay:0.24s">
+              <svg class="w-5 h-5 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" />
+              </svg>
+              <span class="text-xs sm:text-sm md:text-[15px] font-medium text-slate-200 tracking-wide">Custom solutions tailored exactly to your business logic.</span>
+            </div>
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="contact" class="py-20 sm:py-24 px-4 sm:px-8 md:px-12 relative bg-[#020617] text-white w-full overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[650px] h-[350px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-7xl mx-auto space-y-12 sm:space-y-16">
+    <div class="text-center space-y-2">
+      <h2 class="reveal text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight select-none cursor-default">
+        <span class="text-white">Get In </span>
+        <span class="text-blue-500">Touch</span>
+      </h2>
+      <p class="reveal text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto" style="--ry:15px;--delay:.1s">
+        Have a project in mind, an opportunity, or want to connect? Send a direct note.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto items-start">
+      <!-- Form -->
+      <form id="contact-form" class="reveal order-1 lg:order-2 p-6 sm:p-8 bg-slate-900/40 border border-slate-800/80 rounded-3xl backdrop-blur-md shadow-xl space-y-5">
+        <div id="contact-success" class="hidden p-3.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl text-xs font-medium items-center gap-2">
+          <i data-lucide="circle-check" width="16" height="16" class=""></i> Message sent successfully! I will get back to you shortly.
+        </div>
+
+        <div id="contact-error" class="hidden p-3.5 bg-rose-500/10 border border-rose-500/30 text-rose-400 rounded-xl text-xs font-medium">
+          Failed to send message. Please reach out directly via email.
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold uppercase tracking-wider text-slate-300">Name</label>
+          <input type="text" name="name" required placeholder="Your Name"
+            class="w-full px-4 py-3 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors" />
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold uppercase tracking-wider text-slate-300">Email</label>
+          <input type="email" name="email" required placeholder="your.email@example.com"
+            class="w-full px-4 py-3 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors" />
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold uppercase tracking-wider text-slate-300">Message</label>
+          <textarea name="message" rows="4" required placeholder="Tell me about your project or inquiry..."
+            class="w-full px-4 py-3 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="contact-submit"
+          class="w-full flex items-center justify-center gap-2 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-xl transition-all shadow-md shadow-blue-600/20 active:scale-95 disabled:opacity-70 cursor-pointer">
+          <span data-state="idle" class="inline-flex items-center gap-2">Send Message <i data-lucide="send" width="15" height="15" class=""></i></span>
+          <span data-state="sending" class="hidden items-center gap-2"><i data-lucide="loader-circle" width="16" height="16" class="animate-spin"></i> Sending...</span>
+        </button>
+      </form>
+
+      <!-- Contact Details -->
+      <div class="reveal order-2 lg:order-1 space-y-6 pt-2 lg:pt-0" style="--rd:.5s">
+        <div class="space-y-2 sm:space-y-3">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Let's discuss your next build</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Open for full-time frontend/full-stack developer opportunities, contract work, and technical collaborations.
+          </p>
+        </div>
+
+        <div class="space-y-3.5">
+          <div class="flex items-center gap-4 p-4 bg-slate-900/40 border border-slate-800/80 rounded-2xl backdrop-blur-sm hover:border-blue-500/40 transition-colors">
+            <div class="p-3 bg-blue-600/10 text-blue-400 rounded-xl border border-blue-500/20 shrink-0">
+              <i data-lucide="mail" width="20" height="20" class=""></i>            </div>
+            <div class="truncate">
+              <p class="text-xs text-slate-400">Email Me</p>
+              <a href="mailto:kishanpatoriya2007@gmail.com" class="text-xs sm:text-sm font-semibold text-slate-200 hover:text-blue-400 transition-colors break-all">
+                kishanpatoriya2007@gmail.com              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-4 bg-slate-900/40 border border-slate-800/80 rounded-2xl backdrop-blur-sm hover:border-blue-500/40 transition-colors">
+            <div class="p-3 bg-blue-600/10 text-blue-400 rounded-xl border border-blue-500/20 shrink-0">
+              <i data-lucide="phone" width="20" height="20" class=""></i>            </div>
+            <div>
+              <p class="text-xs text-slate-400">Call Me</p>
+              <a href="tel:+91 78599 93086" class="text-xs sm:text-sm font-semibold text-slate-200 hover:text-blue-400 transition-colors font-mono">
+                +91 78599 93086              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 pt-1">
+          <a href="https://github.com/kishanpatoriya" target="_blank" rel="noreferrer" aria-label="GitHub"
+            class="w-11 h-11 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/50 hover:bg-slate-850 transition-all">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>          </a>
+          <a href="https://www.linkedin.com/in/kishan-patoriya/" target="_blank" rel="noreferrer" aria-label="LinkedIn"
+            class="w-11 h-11 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/50 hover:bg-slate-850 transition-all">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      </main>
+      <footer class="w-full bg-[#020617] border-t border-slate-900/90 text-slate-400 py-12 px-4 sm:px-8 md:px-12">
+  <div class="w-full max-w-7xl mx-auto space-y-10">
+
+    <!-- Top Row -->
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+
+      <!-- Left Info -->
+      <div class="space-y-1.5 max-w-xl">
+        <h3 class="text-2xl font-extrabold text-white tracking-tight">Khushal Parmar</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Laravel Full Stack Developer building custom web applications and scalable digital solutions.
+        </p>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="https://github.com/kishanpatoriya" target="_blank" rel="noreferrer" aria-label="GitHub Profile" class="w-11 h-11 rounded-full bg-slate-900/90 border border-slate-800/90 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/60 hover:bg-slate-850 hover:shadow-[0_0_12px_rgba(59,130,246,0.25)] transition-all duration-200"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+        <a href="https://www.linkedin.com/in/kishan-patoriya/" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" class="w-11 h-11 rounded-full bg-slate-900/90 border border-slate-800/90 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/60 hover:bg-slate-850 hover:shadow-[0_0_12px_rgba(59,130,246,0.25)] transition-all duration-200"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="tel:+91 78599 93086" aria-label="Direct Phone Call" class="w-11 h-11 rounded-full bg-slate-900/90 border border-slate-800/90 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/60 hover:bg-slate-850 hover:shadow-[0_0_12px_rgba(59,130,246,0.25)] transition-all duration-200"><i data-lucide="phone" width="17" height="17" class=""></i></a>
+        <a href="https://wa.me/917859993086?text=Hi%20Khushal%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you%21" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp" class="w-11 h-11 rounded-full bg-slate-900/90 border border-slate-800/90 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/60 hover:bg-slate-850 hover:shadow-[0_0_12px_rgba(59,130,246,0.25)] transition-all duration-200"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+        <a href="mailto:kishanpatoriya2007@gmail.com" aria-label="Send Direct Email" class="w-11 h-11 rounded-full bg-slate-900/90 border border-slate-800/90 text-slate-300 flex items-center justify-center hover:text-white hover:border-blue-500/60 hover:bg-slate-850 hover:shadow-[0_0_12px_rgba(59,130,246,0.25)] transition-all duration-200"><i data-lucide="mail" width="18" height="18" class=""></i></a>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="w-full h-px bg-slate-900"></div>
+
+    <!-- Centered Copyright -->
+    <div class="flex items-center justify-center text-center text-xs text-slate-500">
+      <p>© 2026 Khushal Parmar. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+      <!-- Hero section ke niche aane par floating Scroll-To-Top button -->
+      <button type="button" id="scroll-top" aria-label="Scroll to top"
+  class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-lg shadow-blue-600/30 border border-blue-400/30 backdrop-blur-md cursor-pointer group">
+  <i data-lucide="arrow-up" width="20" height="20" class="transition-transform duration-200 group-hover:-translate-y-0.5"></i></button>
+    </div>
+
+    <script>
+      window.PORTFOLIO = {
+        web3formsKey: "e10f3005-e5d2-47da-830c-474e225b12c4",
+        email: "kishanpatoriya2007@gmail.com"      };
+    </script>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
